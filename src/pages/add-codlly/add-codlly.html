@@ -7,5 +7,32 @@
 </ion-header>
 
 <ion-content padding>
-
+ <form (submit)="onSubmit()">
+   <ion-list>
+    <ion-item>
+      <ion-label fixed>Name</ion-label>
+      <ion-input [(ngModel)]="name" name="name" type="text"></ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-label fixed>Note</ion-label>
+      <ion-input [(ngModel)]="note" name="note" type="textarea"></ion-input>
+    </ion-item>   
+    <ion-item>
+      <ion-label fixed>Language</ion-label>
+      <ion-select [(ngModel)]="language" name="language">
+        <ion-option value="Ruby">Ruby</ion-option>
+        <ion-option value="Javascript">Javascript</ion-option>
+        <ion-option value="Angular">Angular</ion-option>
+        <ion-option value="ReactJS">ReactJS</ion-option>
+        <ion-option value="Ruby on Rails">Ruby on Rails</ion-option>
+        <ion-option value="Java">Java</ion-option>
+        <ion-option value="C#">C#</ion-option>
+        <ion-option value="NodeJS">NodeJS</ion-option>
+      </ion-select>
+    </ion-item> 
+    <ion-item>
+      <button ion-button type="submit" block>Add Codlly</button>
+    </ion-item>    
+   </ion-list>
+ </form>
 </ion-content>

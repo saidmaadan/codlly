@@ -18,4 +18,17 @@ export class CodllyService{
     return this.http.get(this.codllyUrl+'?apiKey='+this.apiKey)
       .map(res => res.json());
   }
+
+  addCodlly(coding){
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post(this.codllyUrl+'?apiKey='+this.apiKey, JSON.stringify(coding), {headers: headers})
+      .map(res => res.json());
+      
+  }
+
+  deleteAct(codingId){
+    return this.http.delete(this.codllyUrl+'/'+codingId+'?apiKey='+this.apiKey)
+      .map(res => res.json());
+  }
 }

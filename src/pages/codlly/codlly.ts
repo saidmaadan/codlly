@@ -20,6 +20,12 @@ export class CodllyPage {
     });
   }
 
+  ionViewWillEnter(){
+    this.cs.getCodlly().subscribe(data => {
+      this.codings = data;
+    });
+  }
+
   codeSelected(event, coding){
     this.navCtrl.push(CodllyDetailsPage,{
       coding:coding
