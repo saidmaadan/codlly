@@ -10,10 +10,10 @@ export class CodllyService{
 
   constructor(http:Http){
     this.http = http;
-    this.apiKey = 'HRNAvvsMQadYjxUFr0A11Ol1ZloR10SA';
-    this.codllyUrl = 'https://api.mlab.com/api/1/databases/happycode_app/collections/happycode';
-  }
+    this.apiKey = 'bzEs24WQhh5UA6orndrXq72QX80kLfCq';
+    this.codllyUrl = 'https://api.mlab.com/api/1/databases/happycode/collections/happycodes';
 
+  }
   getCodlly(){
     return this.http.get(this.codllyUrl+'?apiKey='+this.apiKey)
       .map(res => res.json());

@@ -4,6 +4,7 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { CodllyPage } from '../pages/codlly/codlly';
 import { AddCodllyPage } from '../pages/add-codlly/add-codlly';
+import { CodllyDetailsPage } from '../pages/codlly-details/codlly-details';
 import { TabsPage } from '../pages/tabs/tabs';
 
 @NgModule({
@@ -12,6 +13,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     AboutPage,
     CodllyPage,
     AddCodllyPage,
+    CodllyDetailsPage,
     TabsPage
   ],
   imports: [
@@ -22,6 +24,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     MyApp,
     AboutPage,
     AddCodllyPage,
+    CodllyDetailsPage,
     CodllyPage,
     TabsPage
   ],
